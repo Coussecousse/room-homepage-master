@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+    --color-400 : hsl(0,0%, 100%);
+    --color-500 : hsl(0,0%, 63%);
+    --color-600 : hsl(0, 0%, 27%);
+    --color-700 : hsl(0,0%, 0%);
+
+    --fs : 12px;
+
+    --ff : 'League Spartan', sans-serif;
+}
