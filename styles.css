@@ -12,4 +12,27 @@
     --fs : 12px;
 
     --ff : 'League Spartan', sans-serif;
+
+    --fw-500 : 500;
+    --fw-600 : 600;
+    --fw-700 : 700;
+}
+
+* {
+    font-family: var(--ff);
+}
+.menu {
+    height: 105px;
+}
+.div-1_img {
+    height: 360px;
+}
+.arrows {
+    transform: translate(-100%, -100%); 
+}
+.paragraph > p {
+    color: var(--color-500);
+}
+.div-1_link p {
+    letter-spacing: .6em;
 }
