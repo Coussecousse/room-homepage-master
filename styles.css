@@ -5,7 +5,7 @@
 :root {
 
     --color-400 : hsl(0,0%, 100%);
-    --color-500 : hsl(0,0%, 63%);
+    --color-500 : #a1a1a1;
     --color-600 : hsl(0, 0%, 27%);
     --color-700 : hsl(0,0%, 0%);
 
@@ -23,16 +23,46 @@
 }
 .menu {
     height: 105px;
-}
+} 
 .div-1_img {
     height: 360px;
 }
+.principal {
+    @apply object-cover h-full;
+}
+.paragraph {
+    @apply m-6 my-12;
+}
+h2 {
+    @apply font-bold text-4xl py-5 leading-8;
+}
 .arrows {
+    @apply relative bg-black w-28 h-14 left-full flex items-center;
     transform: translate(-100%, -100%); 
 }
-.paragraph > p {
+.arrows div {
+    @apply flex-1;
+}
+.arrows img {
+    @apply mx-auto h-4;
+}
+.paragraph__p {
+    @apply leading-6 mb-3;
     color: var(--color-500);
 }
-.div-1_link p {
+.link {
+    @apply py-8 w-screen ;
+}
+.link a {
+    @apply flex;
+}
+.link p {
+    @apply uppercase w-fit mr-4;
     letter-spacing: .6em;
+}
+.link img {
+    @apply h-fit my-auto;
+}
+h3 {
+    letter-spacing: .3em;
 }
