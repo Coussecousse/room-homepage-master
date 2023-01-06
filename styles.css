@@ -24,11 +24,12 @@
 .menu {
     height: 105px;
 } 
+
 .div-1_img {
     height: 360px;
 }
 .principal {
-    @apply object-cover h-full;
+    @apply object-cover h-full w-screen;
 }
 .paragraph {
     @apply m-6 my-12;
@@ -37,14 +38,18 @@ h2 {
     @apply font-bold text-4xl py-5 leading-8;
 }
 .arrows {
-    @apply relative bg-black w-28 h-14 left-full flex items-center;
+    @apply absolute bg-black w-28 h-14 left-full flex items-center z-10;
     transform: translate(-100%, -100%); 
+    top : 360px;
 }
 .arrows div {
     @apply flex-1;
 }
 .arrows img {
     @apply mx-auto h-4;
+}
+.move {
+    @apply w-screen ease-in duration-300;
 }
 .paragraph__p {
     @apply leading-6 mb-3;

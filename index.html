@@ -21,12 +21,12 @@
 <body>
   <header>
     <nav class="menu absolute w-screen flex">
-      <div class="nav_menu ml-5 absolute h-full flex">
+      <button class="nav_menu ml-5 absolute h-full flex z-30">
         <img src="./images/icon-hamburger.svg" alt="Open" class="m-auto">
-      </div>
-      <div class="logo w-max flex-1 flex">
+      </button>
+      <div class="logo w-max flex-1 flex z-10">
         <img src="./images/logo.svg" alt="logo Room" class="m-auto h-max"></div>
-      <ul class="menu_list hidden">
+      <ul class="bg-white menu_list absolute translate-x-negative-full flex w-full h-full items-center gap-x-5 justify-end font-bold pr-6 ease-in duration-300 z-20">
         <li><a href="">Home</a></li>
         <li><a href="">Shop</a></li>
         <li><a href="">About</a></li>
@@ -34,74 +34,68 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <div class="div-1">
-      <div class="div-1_img">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="./images/desktop-image-hero-1.jpg">
-          <img src="./images/mobile-image-hero-1.jpg" alt="Chair" class="principal">
-        </picture>
-        <div class="arrows">
-          <div class=""><img src="./images/icon-angle-left.svg" alt="arrow left" class=""></div>
-          <div class=""><img src="./images/icon-angle-right.svg" alt="arrow right" class=""></div>
+  <div class="menu_open  w-screen h-screen hidden absolute bg-black-tra"></div>
+  <main class="">
+    <div class="carousel flex overflow-x-hidden ease-in delay-300">
+      <div class="arrows">
+        <div class="arrow h-full w-full flex items-center" id="left"><img src="./images/icon-angle-left.svg" alt="arrow left" class=""></div>
+        <div class="arrow h-full w-full flex items-center" id="right"><img src="./images/icon-angle-right.svg" alt="arrow right" class=""></div>
+      </div>
+      <div class="w-full move active" id="div-1">
+        <div class="div-1_img">
+          <picture class="w-screen">
+            <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-1.jpg">
+            <img src="./images/mobile-image-hero-1.jpg" alt="Chair" class="principal">
+          </picture>
+        </div>
+        <div class="paragraph">
+          <h2 class="">
+            Discover innovative ways to decorate
+          </h2>
+          <p class="paragraph__p">
+            We provide unmatched quality, comfort, and style for property owners across the country.
+            Our experts combine form and function in bringing your vision to life. Create a room in your
+            own style with our collection and make your property a reflection of you and what you love.
+          </p>
+          <div class="link">
+            <a href="" class="">
+              <p class="">Shop now</p>
+              <img src="./images/icon-arrow.svg" alt="arrow" class="">
+            </a>
+          </div>
         </div>
       </div>
-      <div class="paragraph">
-        <h2 class="">
-          Discover innovative ways to decorate
-        </h2>
-        <p class="paragraph__p">
-          We provide unmatched quality, comfort, and style for property owners across the country.
-          Our experts combine form and function in bringing your vision to life. Create a room in your
-          own style with our collection and make your property a reflection of you and what you love.
-        </p>
-        <div class="link">
-          <a href="" class="">
-            <p class="">Shop now</p>
-            <img src="./images/icon-arrow.svg" alt="arrow" class="">
-          </a>
+      <div class="move" id="div-2">
+        <div class="div-1_img second">
+          <picture>
+            <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-2.jpg">
+            <img src="./images/mobile-image-hero-2.jpg" alt="Chair" class="principal">
+          </picture>
+        </div>
+        <div class="paragraph">
+          <h2 class="">
+            We are available all across the globe
+          </h2>
+          <p class="paragraph__p">
+            With stores all over the world, it's easy for you to find furniture for your home or place of business.
+            Locally, we're in most major cities throughout the country. Find the branch nearest you using our
+            store locator. Any questions? Don't hesitate to contact us today.
+          </p>
+          <div class="link">
+            <a href="">
+              <p>Shop now</p>
+              <img src="./images/icon-arrow.svg" alt="arrow">
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="div-2">
-      <div class="div-1_img second">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="./images/desktop-image-hero-2.jpg">
-          <img src="./images/mobile-image-hero-2.jpg" alt="Chair" class="principal">
-        </picture>
-        <div class="arrows">
-          <img src="./images/icon-angle-left.svg" alt="">
-          <img src="./images/icon-angle-right.svg" alt="">
+      <div class="move" id="div-3">
+        <div class="div-1_img second">
+          <picture>
+            <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-3.jpg">
+            <img src="./images/mobile-image-hero-3.jpg" alt="Chair" class="principal">
+          </picture>
         </div>
-      </div>
-      <div class="paragraph">
-        <h2 class="">
-          We are available all across the globe
-        </h2>
-        <p class="paragraph__p">
-          With stores all over the world, it's easy for you to find furniture for your home or place of business.
-          Locally, we're in most major cities throughout the country. Find the branch nearest you using our
-          store locator. Any questions? Don't hesitate to contact us today.
-        </p>
-        <div class="link">
-          <a href="">
-            <p>Shop now</p>
-            <img src="./images/icon-arrow.svg" alt="arrow">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="div-3">
-      <div class="div-1_img second">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="./images/desktop-image-hero-3.jpg">
-          <img src="./images/mobile-image-hero-3.jpg" alt="Chair" class="principal">
-        </picture>
-        <div class="arrows">
-          <img src="./images/icon-angle-left.svg" alt="arrow left">
-          <img src="./images/icon-angle-right.svg" alt="arrow right">
-        </div>
-      </div>
         <div class="paragraph">
           <h2 class="">
             Manufactured with the best materials
@@ -118,9 +112,10 @@
             </a>
           </div>
         </div>
+      </div>
     </div>
     <div class="last">
-      <img src="./images/image-about-dark.jpg" alt="Black chair">
+      <img src="./images/image-about-dark.jpg" alt="Black chair" class="principal">
       <div class="paragraph">
         <h3 class="uppercase font-bold text-sm mb-4">About our furniture</h3>
         <p class="text-gray">
@@ -130,12 +125,13 @@
           or anything in between. Product specialists are available to help you create your dream space.
           </p>
       </div>
-      <img src="./images/image-about-light.jpg" alt="Black chair">
+      <img src="./images/image-about-light.jpg" alt="Black chair" class="principal">
     </div>
   </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

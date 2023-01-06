@@ -517,6 +517,18 @@ video {
   position: absolute;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -546,6 +558,10 @@ video {
   height: max-content;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -555,8 +571,43 @@ video {
   width: max-content;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.translate-x-negative-full {
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
 }
 
 .text-sm {
@@ -575,6 +626,18 @@ video {
 .text-gray {
   --tw-text-opacity: 1;
   color: rgb(161 161 161 / var(--tw-text-opacity));
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 :root {
@@ -603,6 +666,7 @@ video {
 
 .principal {
   height: 100%;
+  width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -622,8 +686,9 @@ h2 {
 }
 
 .arrows {
-  position: relative;
+  position: absolute;
   left: 100%;
+  z-index: 10;
   display: flex;
   height: 3.5rem;
   width: 7rem;
@@ -631,6 +696,7 @@ h2 {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 0% / var(--tw-bg-opacity));
   transform: translate(-100%, -100%);
+  top : 360px;
 }
 
 .arrows div {
@@ -641,6 +707,12 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   height: 1rem;
+}
+
+.move {
+  width: 100vw;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .paragraph__p {
