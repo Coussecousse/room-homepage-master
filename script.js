@@ -7,6 +7,7 @@ menu = document.querySelector('.nav_menu');
 menu.addEventListener("click", () => {
     img = menu.querySelector("img");
     list = document.querySelector(".menu_list");
+    menuOpen = document.querySelector(".menu_open");
 
     if (img.alt == "Open") {
         img.alt = "Close";
@@ -14,12 +15,16 @@ menu.addEventListener("click", () => {
 
         list.classList.remove('hidden');
         list.classList.remove('translate-x-negative-full');
+        menuOpen.classList.remove("translate-x-negative-full");
+
 
     } else {
         img.alt = "Open";
         img.src = "./images/icon-hamburger.svg";
 
         list.classList.add('translate-x-negative-full');
+        menuOpen.classList.add("translate-x-negative-full");
+
     }
 })
 

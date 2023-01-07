@@ -15,35 +15,37 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%); } 
   </style>
 </head>
 <body>
   <header>
     <nav class="menu absolute w-screen flex">
-      <button class="nav_menu ml-5 absolute h-full flex z-30">
+      <button class="nav_menu ml-5 absolute h-full flex z-30 md:hidden">
         <img src="./images/icon-hamburger.svg" alt="Open" class="m-auto">
       </button>
-      <div class="logo w-max flex-1 flex z-10">
-        <img src="./images/logo.svg" alt="logo Room" class="m-auto h-max"></div>
-      <ul class="bg-white menu_list absolute translate-x-negative-full flex w-full h-full items-center gap-x-5 justify-end font-bold pr-6 ease-in duration-300 z-20">
-        <li><a href="">Home</a></li>
-        <li><a href="">Shop</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+      <div class="logo w-max flex-1 flex z-10 md:flex-none md:mx-14">
+        <img src="./images/logo.svg" alt="logo Room" class="m-auto h-max">
+      </div>
+      <ul class="bg-white menu_list absolute translate-x-negative-full flex w-full h-full items-center gap-x-5 justify-end font-semibold pr-6 ease-in duration-300 z-20 md:translate-x-0 md:bg-transparent
+                 md:text-white md:static md:flex-1 md:justify-start ">
+        <li class=""><a href="" class="hover:after:opacity-100 lowercase relative after:bg-white after:w-5 after:h-[2px] after:absolute after:left-1/2 after:top-full after:mt-2 after:translate-x-1/2-negative after:transition-opacity after:opacity-0 after:ease-in after:delay-75">Home</a></li>
+        <li class=""><a href="" class="hover:after:opacity-100 lowercase relative after:bg-white after:w-5 after:h-[2px] after:absolute after:left-1/2 after:top-full after:mt-2 after:translate-x-1/2-negative after:transition-opacity after:opacity-0 after:ease-in after:delay-75">Shop</a></li>
+        <li class=""><a href="" class="hover:after:opacity-100 lowercase relative after:bg-white after:w-5 after:h-[2px] after:absolute after:left-1/2 after:top-full after:mt-2 after:translate-x-1/2-negative after:transition-opacity after:opacity-0 after:ease-in after:delay-75">About</a></li> 
+        <li class=""><a href="" class="hover:after:opacity-100 lowercase relative after:bg-white after:w-5 after:h-[2px] after:absolute after:left-1/2 after:top-full after:mt-2 after:translate-x-1/2-negative after:transition-opacity after:opacity-0 after:ease-in after:delay-75">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <div class="menu_open  w-screen h-screen hidden absolute bg-black-tra"></div>
+  <div class="menu_open  w-screen h-screen translate-x-negative-full absolute bg-black-transparent ease-in duration-300 z-10"></div>
   <main class="">
-    <div class="carousel flex overflow-x-hidden ease-in delay-300">
+    <div class="carousel flex overflow-x-hidden ease-in delay-300 md:max-h-[530px] md:relative">
       <div class="arrows">
-        <div class="arrow h-full w-full flex items-center" id="left"><img src="./images/icon-angle-left.svg" alt="arrow left" class=""></div>
-        <div class="arrow h-full w-full flex items-center" id="right"><img src="./images/icon-angle-right.svg" alt="arrow right" class=""></div>
+        <button class="arrow h-full w-full flex items-center hover:bg-color-hover" id="left"><img src="./images/icon-angle-left.svg" alt="arrow left" class=""></button>
+        <button class="arrow h-full w-full flex items-center hover:bg-color-hover" id="right"><img src="./images/icon-angle-right.svg" alt="arrow right" class=""></button>
       </div>
-      <div class="w-full move active" id="div-1">
-        <div class="div-1_img">
-          <picture class="w-screen">
+      <div class="move active" id="div-1">
+        <div class="move__img">
+          <picture class="">
             <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-1.jpg">
             <img src="./images/mobile-image-hero-1.jpg" alt="Chair" class="principal">
           </picture>
@@ -57,8 +59,8 @@
             Our experts combine form and function in bringing your vision to life. Create a room in your
             own style with our collection and make your property a reflection of you and what you love.
           </p>
-          <div class="link">
-            <a href="" class="">
+          <div class="link" >
+            <a href="" class="hover:text-gray">
               <p class="">Shop now</p>
               <img src="./images/icon-arrow.svg" alt="arrow" class="">
             </a>
@@ -66,7 +68,7 @@
         </div>
       </div>
       <div class="move" id="div-2">
-        <div class="div-1_img second">
+        <div class="move__img second">
           <picture>
             <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-2.jpg">
             <img src="./images/mobile-image-hero-2.jpg" alt="Chair" class="principal">
@@ -81,8 +83,8 @@
             Locally, we're in most major cities throughout the country. Find the branch nearest you using our
             store locator. Any questions? Don't hesitate to contact us today.
           </p>
-          <div class="link">
-            <a href="">
+          <div class="link ">
+            <a href="" class="hover:text-gray">
               <p>Shop now</p>
               <img src="./images/icon-arrow.svg" alt="arrow">
             </a>
@@ -90,7 +92,7 @@
         </div>
       </div>
       <div class="move" id="div-3">
-        <div class="div-1_img second">
+        <div class="move__img second">
           <picture>
             <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-3.jpg">
             <img src="./images/mobile-image-hero-3.jpg" alt="Chair" class="principal">
@@ -105,8 +107,8 @@
             to ensure that every product is made as perfect and as consistent as possible. With three decades of
             experience in this industry, we understand what customers want for their home and office.
           </p>
-          <div class="link">
-            <a href="">
+          <div class="link ">
+            <a href="" class="hover:text-gray">
               <p>Shop now</p>
               <img src="./images/icon-arrow.svg" alt="arrow">
             </a>
@@ -114,10 +116,10 @@
         </div>
       </div>
     </div>
-    <div class="last">
+    <div class="last md:grid md:grid-cols-3">
       <img src="./images/image-about-dark.jpg" alt="Black chair" class="principal">
-      <div class="paragraph">
-        <h3 class="uppercase font-bold text-sm mb-4">About our furniture</h3>
+      <div class="paragraph ">
+        <h3 class="uppercase font-bold text-sm mb-4 md:text-base">About our furniture</h3>
         <p class="text-gray">
           Our multifunctional collection blends design and function to suit your individual taste.
           Make each room unique, or pick a cohesive theme that best express your interests and what

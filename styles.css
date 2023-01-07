@@ -4,10 +4,11 @@
 
 :root {
 
-    --color-400 : hsl(0,0%, 100%);
+    --color-400 : #ffffff;
     --color-500 : #a1a1a1;
     --color-600 : hsl(0, 0%, 27%);
     --color-700 : hsl(0,0%, 0%);
+    --color-700 : rgb(0, 0, 0, .3);
 
     --fs : 12px;
 
@@ -19,6 +20,7 @@
 }
 
 * {
+    box-sizing: border-box;
     font-family: var(--ff);
 }
 .menu {
@@ -29,18 +31,22 @@
     height: 360px;
 }
 .principal {
-    @apply object-cover h-full w-screen;
+    @apply object-cover h-[360px] w-screen md:h-full md:w-full md:max-h-[530px];
 }
 .paragraph {
-    @apply m-6 my-12;
+    @apply m-6 my-12 md:flex md:flex-col md:justify-center md:items-center;
+}
+.paragraph > * {
+    @apply md:max-w-[405px];
+}
+.last  .paragraph > * {
+    @apply md:w-[485px];
 }
 h2 {
     @apply font-bold text-4xl py-5 leading-8;
 }
 .arrows {
-    @apply absolute bg-black w-28 h-14 left-full flex items-center z-10;
-    transform: translate(-100%, -100%); 
-    top : 360px;
+    @apply absolute bg-black w-28 h-14 top-[360px] left-full translate-x-negative-full translate-y-negative-full flex items-center z-10 md:left-[60%] md:top-full md:translate-x-0;
 }
 .arrows div {
     @apply flex-1;
@@ -49,14 +55,20 @@ h2 {
     @apply mx-auto h-4;
 }
 .move {
-    @apply w-screen ease-in duration-300;
+    @apply w-screen ease-in duration-300 md:grid md:grid-cols-2 md:min-w-full;
+}
+.move__img {
+    @apply w-screen md:h-full md:w-auto;
+}
+.move__img picture {
+    @apply w-screen md:w-full md:h-full;
 }
 .paragraph__p {
     @apply leading-6 mb-3;
     color: var(--color-500);
 }
 .link {
-    @apply py-8 w-screen ;
+    @apply py-8 w-full ;
 }
 .link a {
     @apply flex;
